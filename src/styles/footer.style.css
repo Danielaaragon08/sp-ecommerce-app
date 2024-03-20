@@ -5,3 +5,18 @@
 .footer-text-column p{
     margin-bottom: 10px;
 }
+
+.pagos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding-top: 10px;
+}
+
+.pagos div{
+    width: 30px;
+    border-radius: 5px;
+    background-color: white;
+    padding: 0px 10px;
+}

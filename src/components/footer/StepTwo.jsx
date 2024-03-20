@@ -9,7 +9,12 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 export const StepTwo = () => {
   return (
     <>
-      <Grid container direction="row" justifyContent="space-between" sx={{mt:{xs: 28, md: 14}}}>
+      <Grid
+        container
+        direction="row"
+        justifyContent="space-between"
+        sx={{ mt: { xs: 28, md: 14 } }}
+      >
         <Grid item xs={12} md={4} sx={{ pr: 2 }}>
           <Typography variant="h5">
             <strong>SHOP.CO</strong>
@@ -25,20 +30,39 @@ export const StepTwo = () => {
             justifyContent="flex-start"
             sx={{ mt: 2, mb: 2 }}
           >
-            <IconButton sx={{ backgroundColor: "white", mr: 2, 
-              "&:hover": { backgroundColor: "white" }, }}>
+            <IconButton
+              sx={{
+                backgroundColor: "white",
+                mr: 2,
+                "&:hover": { backgroundColor: "white" },
+              }}
+            >
               <TwitterIcon sx={{ color: "black" }} />
             </IconButton>
-            <IconButton sx={{ backgroundColor: "Black", mr: 2,
-          "&:hover": { backgroundColor: "black" } }}>
+            <IconButton
+              sx={{
+                backgroundColor: "Black",
+                mr: 2,
+                "&:hover": { backgroundColor: "black" },
+              }}
+            >
               <FacebookIcon sx={{ color: "white" }} />
             </IconButton>
-            <IconButton sx={{ backgroundColor: "white", mr: 2,
-          "&:hover": { backgroundColor: "white" }}}>
+            <IconButton
+              sx={{
+                backgroundColor: "white",
+                mr: 2,
+                "&:hover": { backgroundColor: "white" },
+              }}
+            >
               <InstagramIcon sx={{ color: "black" }} />
             </IconButton>
-            <IconButton sx={{ backgroundColor: "white",
-            "&:hover": { backgroundColor: "white" } }}>
+            <IconButton
+              sx={{
+                backgroundColor: "white",
+                "&:hover": { backgroundColor: "white" },
+              }}
+            >
               <GitHubIcon sx={{ color: "black" }} />
             </IconButton>
           </Grid>
@@ -93,17 +117,27 @@ export const StepTwo = () => {
 
       <Grid
         container
-        direction="row"
+        direction={{ xs: "column", md: "row" }}
         justifyContent="space-between"
         alignItems="center"
       >
         <Typography>Shop.co © 2000-2023, All Rights Reserved </Typography>
-        <Box>
-          <img src="/footer/visa.png" alt="visa" width={32} />
-          <img src="/footer/mastercard.png" alt="mastercard" width={32} />
-          <img src="/footer/paypal.png" alt="paypal" width={32} />
-          <img src="/footer/payApple.png" alt="paypalApple" width={32} />
-          <img src="/footer/googlePay.png" alt="googlePay" width={32} />
+        <Box className="pagos">
+          <Box>
+            <img src="/footer/visa.png" alt="visa" width={32} />
+          </Box>
+          <Box>
+            <img src="/footer/mastercard2.png" alt="mastercard" width={32} />
+          </Box>
+          <Box>
+            <img src="/footer/paypal.png" alt="paypal" width={32} />
+          </Box>
+          <Box>
+            <img src="/footer/payApple.png" alt="paypalApple" width={32} />
+          </Box>
+          <Box>
+            <img src="/footer/googlePay.png" alt="googlePay" width={32} />
+          </Box>
         </Box>
       </Grid>
     </>
