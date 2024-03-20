@@ -52,7 +52,7 @@ export const Header = () => {
             <Link color="inherit">Sign Up Now</Link>{" "}
           </Typography>
         </Box>
-        <Container maxWidth="xl">
+        <Container >
           <Toolbar disableGutters>
             {/* Inicio Typography de pantalla grande */}
             <Typography
@@ -70,7 +70,7 @@ export const Header = () => {
                 textTransform: "none",
               }}
             >
-              SHOP.CO
+              <h3>SHOP.CO</h3> 
             </Typography>
             {/* Fin Typography de pantalla grande */}
 
