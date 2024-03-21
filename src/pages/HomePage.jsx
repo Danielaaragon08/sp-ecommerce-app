@@ -1,15 +1,12 @@
-import React from "react";
+import { Box, Container } from "@mui/material";
+import { StepOne } from "../components/home/StepOne";
 
 export const HomePage = () => {
   return (
-    <>
-      <h1> Home Page </h1>
-      <h1> Home Page </h1>
-      <h1> Home Page </h1>
-      <h1> Home Page </h1>
-      <h1> Home Page </h1>
-      <h1> Home Page </h1>
-      <h1> Home Page </h1>
-    </>
+    <Box sx={{backgroundColor: "#F2F0F1"}}>
+      <Container>
+        <StepOne />
+      </Container>
+    </Box>
   );
 };

@@ -6,8 +6,11 @@ export const AppLayout = ({ children }) => {
   return (
     <>
       <Header />
-      <Toolbar sx={{ py:2}}/>
+      <Toolbar />
+      <Toolbar />
       {children}
+      <Toolbar />
+      <Toolbar />
       <Footer />
     </>
   );
