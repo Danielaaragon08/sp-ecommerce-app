@@ -1,5 +1,4 @@
 import { Box, Button, Grid, Typography } from "@mui/material";
-import React from "react";
 
 export const StepOne = () => {
   return (
@@ -70,29 +69,6 @@ export const StepOne = () => {
         <Grid item xs={12} md={6}>
           <Box>
             <img src="/homePage/logohomepage.png" alt="Img Home" width="100%" />
-          </Box>
-        </Grid>
-        <Grid
-          container
-          direction="row"
-          justifyContent="space-between"
-          alignItems="center"
-          backgroundColor="black"
-        >
-          <Box>
-            <img src="/homePage/versace.png" alt="Img Home" />
-          </Box>
-          <Box>
-            <img src="/homePage/zara.png" alt="Img Zara" />
-          </Box>
-          <Box>
-            <img src="/homePage/gucci.png" alt="Img Zara" />
-          </Box>
-          <Box>
-            <img src="/homePage/prada.png" alt="Img Zara" />
-          </Box>
-          <Box>
-            <img src="/homePage/calvinklein.png" alt="Img Zara" />
           </Box>
         </Grid>
       </Grid>

@@ -23,7 +23,7 @@ export const StepOne = () => {
         }}
       >
         <Grid item sx={12} md={7} sx={{ marginBottom: 2 }}>
-          <Typography variant="h4" sx={{ color: "white" }}>
+          <Typography variant="h4" color="white">
             STAY UPTO DATE ABOUT OUR LATEST OFFERS
           </Typography>
         </Grid>
