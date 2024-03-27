@@ -22,6 +22,7 @@ export const StepThree = () => {
               key={imageInfo.id}
               name={imageInfo.name}
               amount={imageInfo.amount}
+              percentage={imageInfo.percentage}
               rating={imageInfo.rating}
               sourceImage={imageInfo.sourceImage}
             />
@@ -29,7 +30,22 @@ export const StepThree = () => {
         })}
       </Grid>
       <Box textAlign="center" mt={3}>
-        <Button variant="text">View All</Button>
+        <Button
+          variant="outlined"
+          sx={{
+            borderRadius: 8,
+            borderColor: "gray",
+            backgroundColor: "white",
+            mt: 2,
+            p: 1,
+            color: "black",
+            "&:hover": { backgroundColor: "white", borderColor: "#F2F2F2" },
+            textTransform: "none",
+            width: "20%"
+          }}
+        >
+          View All
+        </Button>
       </Box>
     </>
   );

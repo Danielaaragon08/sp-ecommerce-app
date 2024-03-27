@@ -12,7 +12,8 @@ import {
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 240,
+    width: 260,
+    height: 390,
     marginRight: 20,
   },
   media: {
@@ -27,7 +28,7 @@ const useStyles = makeStyles({
   },
 });
 
-export const ShopCard = ({ name, amount, rating, sourceImage }) => {
+export const ShopCard = ({ name, amount, rating, sourceImage, percentage }) => {
   const classes = useStyles();
 
   return (
@@ -40,7 +41,7 @@ export const ShopCard = ({ name, amount, rating, sourceImage }) => {
             title={name}
           />
           <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
+            <Typography variant="h5" component="h2">
               {name}
             </Typography>
             <Box className={classes.ratingBox}>
@@ -51,9 +52,45 @@ export const ShopCard = ({ name, amount, rating, sourceImage }) => {
               />
               <Typography variant="p">{rating}</Typography>
             </Box>
-            <Typography gutterBottom variant="h5" component="h2">
-              $ {amount}
-            </Typography>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "flex-start",
+                alignItems: "center",
+                gap: 1,
+              }}
+            >
+              {percentage ? (
+                <Typography variant="h6">
+                  ${amount - amount * (percentage / 100)}
+                </Typography>
+              ) : (
+                <Typography variant="h6">${amount}</Typography>
+              )}
+
+              {percentage && (
+                <>
+                  <Typography
+                    variant="h6"
+                    sx={{ color: "gray", textDecorationLine: "line-through" }}
+                  >
+                    ${amount}
+                  </Typography>
+                  <Typography
+                    variant="p"
+                    sx={{
+                      backgroundColor: "#ffebeb",
+                      color: "#ff3333",
+                      py: 1,
+                      px: 2,
+                      borderRadius: 4,
+                    }}
+                  >
+                    {percentage}%
+                  </Typography>
+                </>
+              )}
+            </Box>
           </CardContent>
         </CardActionArea>
       </Card>

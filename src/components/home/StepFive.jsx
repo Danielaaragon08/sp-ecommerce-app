@@ -25,7 +25,7 @@ export const StepFive = () => {
   const classes = useStyles();
 
   return (
-    <Box sx={{ backgroundColor: "#F2F0F1", p: 5, borderRadius: 5 }}>
+    <Box sx={{ backgroundColor: "#F2F0F1", p: 5, borderRadius: 5, mt:4}}>
       <Typography textAlign="center" variant="h3" mb={3}>
         <strong>BROWSE BY DRESS STYLE</strong>{" "}
       </Typography>

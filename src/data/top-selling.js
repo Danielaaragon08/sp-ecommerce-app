@@ -5,6 +5,7 @@ export const topSelling = [
       rating: 2.5,
       amount: 212,
       sourceImage: "/homePage/verticalstriped.png",
+      percentage: 20,
     },
     {
       id: 2,

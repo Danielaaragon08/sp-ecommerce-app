@@ -10,8 +10,9 @@ export const newArrivals = [
     id: 2,
     name: "Skinny Fit Jeans",
     rating: 4,
-    amount: 1300,
+    amount: 260,
     sourceImage: "/homePage/jeans.png",
+    percentage: 20,
   },
   {
     id: 3,
@@ -24,7 +25,8 @@ export const newArrivals = [
     id: 4,
     name: "Sleeve Striped T-shirt",
     rating: 5,
-    amount: 130,
+    amount: 160,
     sourceImage: "/homePage/sleeve.png",
+    percentage: 30,
   },
 ];
