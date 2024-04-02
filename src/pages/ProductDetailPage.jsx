@@ -1,9 +1,15 @@
+import { Container } from "@mui/material";
 import React from "react";
+import { StepOne } from "../components/productDetails/StepOne";
+import { StepTwo } from "../components/productDetails/StepTwo";
 
 export const ProductDetailPage = () => {
   return (
     <>
-      <h1> ProductDetailPage </h1>
+     <Container>
+      <StepOne />
+      <StepTwo />
+      </Container>
     </>
   );
 };

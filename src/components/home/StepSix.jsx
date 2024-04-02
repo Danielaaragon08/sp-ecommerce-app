@@ -25,10 +25,13 @@ export const StepSix = () => {
     infinite: true,
     speed: 500,
     slidesToShow: 3,
+    touchMove: true,
+    arrows: false,
+    centerPadding: "100px",
   };
 
   return (
-    <Box sx={{marginBottom:10}}>
+    <Box sx={{ marginBottom: 10 }}>
       <Typography
         variant="h3"
         mt={8}
@@ -51,24 +54,21 @@ export const StepSix = () => {
         </div>
       </Typography>
 
-      <div className="slider-container" >
-        <Slider 
+      <div className="slider-container">
+        <Slider
           ref={(slider) => {
             sliderRef = slider;
           }}
           {...settings}
         >
-          
           {happyCustomers.map((cardInfo) => {
             return (
-              <ReviewCard 
+              <ReviewCard
                 key={cardInfo.id}
                 name={cardInfo.name}
                 rating={cardInfo.rating}
                 description={cardInfo.description}
-                 
               />
-              
             );
           })}
         </Slider>

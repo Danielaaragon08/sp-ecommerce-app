@@ -2,12 +2,13 @@ import { makeStyles } from "@material-ui/styles";
 import { Card, CardContent, Rating, Typography } from "@mui/material";
 import { PropTypes } from "prop-types";
 import CheckCircleSharpIcon from "@mui/icons-material/CheckCircleSharp";
+import { format } from "date-fns";
 
 const useStyles = makeStyles({
   cardCharacteristics: {
-    width: 320,
-    height: 150,
-    borderRadius: 5
+    width: 520,
+    height: 200,
+    borderRadius: 5,
   },
   nameCharacteristics: {
     display: "flex",
@@ -15,8 +16,16 @@ const useStyles = makeStyles({
   },
 });
 
-export const ReviewCard = ({ name, rating, description }) => {
+let fechaMostrada = null;
+
+export const ReviewCard = ({ name, rating, description, datePosted }) => {
   const classes = useStyles();
+  if (datePosted) {
+    const fechaFormateada = new Date(datePosted);
+
+    fechaMostrada = format(fechaFormateada, "MMMM d, yyyy");
+  }
+
   return (
     <>
       <Card className={classes.cardCharacteristics}>
@@ -29,6 +38,11 @@ export const ReviewCard = ({ name, rating, description }) => {
           </Typography>
 
           <Typography color="text.secondary">{description}</Typography>
+          {datePosted && (
+            <Typography sx={{ marginY: 2 }}>
+              Posted on {fechaMostrada}
+            </Typography>
+          )}
         </CardContent>
       </Card>
     </>

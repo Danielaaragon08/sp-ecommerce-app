@@ -25,7 +25,7 @@ export const StepFive = () => {
   const classes = useStyles();
 
   return (
-    <Box sx={{ backgroundColor: "#F2F0F1", p: 5, borderRadius: 5, mt:4}}>
+    <Box sx={{ backgroundColor: "#F2F0F1", p: 5, borderRadius: 5, mt: 4 }}>
       <Typography textAlign="center" variant="h3" mb={3}>
         <strong>BROWSE BY DRESS STYLE</strong>{" "}
       </Typography>
@@ -77,8 +77,7 @@ export const StepFive = () => {
             }}
           >
             <Typography className={classes.boxText} variant="h4">
-              {" "}
-              <strong>Gym</strong>{" "}
+              <strong>Gym</strong>
             </Typography>
           </Box>
         </Grid>
