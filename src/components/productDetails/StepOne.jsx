@@ -13,6 +13,7 @@ import {
 import CheckOutlinedIcon from "@mui/icons-material/CheckOutlined";
 import RemoveOutlinedIcon from "@mui/icons-material/RemoveOutlined";
 import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
+import { useState } from "react";
 
 const useStyles = makeStyles({
   ratingBox: {
@@ -25,6 +26,21 @@ const useStyles = makeStyles({
 });
 
 export const StepOne = () => {
+  const valorInicialContador = 0;
+  const [contador, setContador] = useState(valorInicialContador);
+  const handleIncrementClick = () => {
+    setContador(contador + 1);
+  };
+
+  const handleDecrement = () => {
+    if (contador === 0) return;
+    setContador(contador - 1);
+  };
+
+  const handleReset = () => {
+    setContador(valorInicialContador);
+  };
+
   const classes = useStyles();
   const percentage = 40;
   const amount = 300;
@@ -147,9 +163,15 @@ export const StepOne = () => {
               <Button size="large" variant="contained">
                 Small
               </Button>
-              <Button size="large" variant="contained">Medium</Button>
-              <Button size="large" variant="contained">Large</Button>
-              <Button size="large" variant="contained">X-Large</Button>
+              <Button size="large" variant="contained">
+                Medium
+              </Button>
+              <Button size="large" variant="contained">
+                Large
+              </Button>
+              <Button size="large" variant="contained">
+                X-Large
+              </Button>
             </Box>
           </Box>
           <Divider />
@@ -166,11 +188,11 @@ export const StepOne = () => {
                 }}
               >
                 <IconButton>
-                  <RemoveOutlinedIcon />
+                  <RemoveOutlinedIcon onClick={handleDecrement} />
                 </IconButton>
-                <Typography>1</Typography>
+                <button onClick={handleReset}>{contador}</button>
                 <IconButton>
-                  <AddOutlinedIcon />
+                  <AddOutlinedIcon onClick={handleIncrementClick} />
                 </IconButton>
               </Box>
             </Grid>
