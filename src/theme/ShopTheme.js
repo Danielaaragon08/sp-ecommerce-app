@@ -5,7 +5,8 @@ export const ShopTheme = createTheme({
   palette: {
     primary: {
       main: "#f0f0f0",
-      dark: "#666666"
+      dark: "#666666",
+      light:"#e6e6e6"
     },
     secondary: {
       main: "#000000",

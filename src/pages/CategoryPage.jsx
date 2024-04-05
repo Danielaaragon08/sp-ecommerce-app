@@ -1,10 +1,13 @@
-import React from 'react'
+import { Container } from "@mui/material";
+import React from "react";
+import { StepOne } from "../components/CategoryPage/StepOne";
 
 export const CategoryPage = () => {
   return (
     <>
-      <h1>CategoryPage</h1>
+      <Container>
+        <StepOne />
+      </Container>
     </>
-  )
-}
-
+  );
+};
