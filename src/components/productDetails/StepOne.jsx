@@ -160,16 +160,16 @@ export const StepOne = () => {
                 gap: 2,
               }}
             >
-              <Button size="large" variant="contained">
+              <Button size="large" variant="contained" color="secondary">
                 Small
               </Button>
-              <Button size="large" variant="contained">
+              <Button size="large" variant="contained" color="secondary">
                 Medium
               </Button>
-              <Button size="large" variant="contained">
+              <Button size="large" variant="contained" color="primary">
                 Large
               </Button>
-              <Button size="large" variant="contained">
+              <Button size="large" variant="contained" color="secondary">
                 X-Large
               </Button>
             </Box>
@@ -200,7 +200,7 @@ export const StepOne = () => {
               <Button
                 size="large"
                 sx={{ borderRadius: 5 }}
-                color="secondary"
+                color="primary"
                 variant="contained"
                 fullWidth
               >

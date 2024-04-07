@@ -30,10 +30,7 @@ export const StepOne = () => {
                 variant="contained"
                 sx={{
                   borderRadius: 50,
-                  backgroundColor: "black",
-                  color: "white",
                   "&:hover": { backgroundColor: "black" },
-                  textTransform: "none",
                   py: 1.5,
                   px: 9,
                   width: { xs: "100%", md: "40%" },

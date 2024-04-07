@@ -4,12 +4,12 @@ import { red } from "@mui/material/colors";
 export const ShopTheme = createTheme({
   palette: {
     primary: {
-      main: "#f0f0f0",
+      main: "#000000",
       dark: "#666666",
       light:"#e6e6e6"
     },
     secondary: {
-      main: "#000000",
+      main: "#e6e6e6",
     },
     error: {
       main: red.A400,
