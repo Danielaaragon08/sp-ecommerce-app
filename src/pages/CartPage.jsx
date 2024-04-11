@@ -1,9 +1,13 @@
+import { Container } from "@mui/material";
 import React from "react";
+import { StepOne } from "../components/Cart/StepOne";
 
 export const CartPage = () => {
   return (
     <>
-      <h1>CartPage</h1>
+    <Container>
+      <StepOne/>
+      </Container>
     </>
   );
 };

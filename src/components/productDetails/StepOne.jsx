@@ -49,7 +49,7 @@ export const StepOne = () => {
       <Box>
         <Typography variant="h6"> {"Home > Shop > Men > T-shirts"} </Typography>
       </Box>
-      <Grid container>
+      <Grid container sx={{borderColor:"gray"}}>
         <Grid container item xs={12} md={6} spacing={3}>
           <Grid item xs={12} md={4}>
             <ImageList
