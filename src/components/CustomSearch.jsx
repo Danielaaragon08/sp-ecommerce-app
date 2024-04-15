@@ -3,6 +3,7 @@ import { styled } from "@mui/material/styles";
 import { InputBase } from "@mui/material";
 
 import SearchIcon from "@mui/icons-material/Search";
+import SellOutlinedIcon from "@mui/icons-material/SellOutlined";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -36,14 +37,14 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-export const CustomSearch = () => {
+export const CustomSearch = ({ description, isSearch }) => {
   return (
     <Search>
       <SearchIconWrapper>
-        <SearchIcon />
+        {isSearch ? <SearchIcon /> : <SellOutlinedIcon />}
       </SearchIconWrapper>
       <StyledInputBase
-        placeholder="Search for products…"
+        placeholder={description}
         inputProps={{ "aria-label": "search" }}
       />
     </Search>

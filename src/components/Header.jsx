@@ -181,7 +181,7 @@ export const Header = () => {
               </Button>
             </Box>
             <Box sx={{ flexGrow: 4, display: { xs: "none", md: "block" } }}>
-              <CustomSearch/>
+              <CustomSearch description="Search for products…" isSearch={true}/>
             </Box>
             <Box sx={{ flexGrow: 0 }}>
               <IconButton sx={{ display: { xs: "inline-flex", md: "none" } }}>

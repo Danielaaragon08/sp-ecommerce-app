@@ -1,19 +1,10 @@
-import {
-  Box,
-  Button,
-  Divider,
-  Grid,
-  IconButton,
-  Typography,
-} from "@mui/material";
-import React, { useState } from "react";
+import { Box, Button, Divider, Grid, Typography } from "@mui/material";
+
 import { Cart } from "../../data/Cart";
 import { CardProduct } from "./CardProducts";
 
-import RemoveOutlinedIcon from "@mui/icons-material/RemoveOutlined";
-import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
-import DeleteIcon from "@mui/icons-material/Delete";
-import SellOutlinedIcon from "@mui/icons-material/SellOutlined";
+import { CustomSearch } from "../CustomSearch";
+
 export const StepOne = () => {
   return (
     <>
@@ -66,35 +57,73 @@ export const StepOne = () => {
               border: 1,
               borderColor: "primary.light",
               padding: 2,
-              marginLeft:3,
+              marginLeft: 3,
               borderRadius: 8,
             }}
           >
             <Typography variant="h6">Order Summary</Typography>
-            <Box sx={{display:"flex", justifyContent:"space-between", alignItems: "center",}}>
-            <Typography sx={{ my: 3 }}>Subtotal</Typography>
-            <Typography><strong>$565</strong></Typography>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+              }}
+            >
+              <Typography sx={{ my: 3 }}>Subtotal</Typography>
+              <Typography>
+                <strong>$565</strong>
+              </Typography>
             </Box>
 
-            <Box sx={{display:"flex", justifyContent:"space-between", alignItems: "center",}}>
-            <Typography>Discount(-20%)</Typography>
-            <Typography color="red"><strong>-$113</strong></Typography>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+              }}
+            >
+              <Typography>Discount(-20%)</Typography>
+              <Typography color="red">
+                <strong>-$113</strong>
+              </Typography>
             </Box>
 
-            <Box sx={{display:"flex", justifyContent:"space-between", alignItems: "center",}}>
-            <Typography sx={{ my: 3 }}>Delivery Free</Typography>
-            <Typography><strong>$15</strong></Typography>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+              }}
+            >
+              <Typography sx={{ my: 3 }}>Delivery Free</Typography>
+              <Typography>
+                <strong>$15</strong>
+              </Typography>
             </Box>
-            <Divider/>
+            <Divider />
 
-            <Box sx={{display:"flex", justifyContent:"space-between", alignItems: "center",}}>
-            <Typography sx={{ my: 3 }}>Total</Typography>
-            <Typography variant="h6"><strong>$467</strong></Typography>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+              }}
+            >
+              <Typography sx={{ my: 3 }}>Total</Typography>
+              <Typography variant="h6">
+                <strong>$467</strong>
+              </Typography>
             </Box>
-            <Button size="large" variant="contained" color="secondary">
-              <SellOutlinedIcon sx={{ ml: 3 }}> </SellOutlinedIcon>
-              Add promo code
-            </Button>
+
+            <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+              <CustomSearch description="Add promo code" isSearch={false} />
+              <Button sx={{width: "40%", ml: 1}} variant="contained">
+                Apply
+              </Button>
+            </Box>
+            <Button fullWidth variant="contained" sx={{mt: 3, py: 2}}>
+                Go to Checkout
+              </Button>
           </Grid>
         </Grid>
       </Box>
